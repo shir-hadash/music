@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>שיר חדש - הורדת שירים</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Heebo', sans-serif;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Heebo', sans-serif;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            color: #333;
+        }
+
+    header {
+        background: linear-gradient(
+            rgba(255, 255, 255, 0.5),
+            rgba(255, 255, 255, 0.5)
+        ),
+        url('header-bg.jpg');  /* החלף את 'header-bg.jpg' בנתיב לתמונה שלך */
+        background-size: cover;
+        background-position: center;
+        padding: 1rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+        .logo {
+            font-size: 2.5rem;
+            color: #ff6b6b;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1rem 0;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+            position: relative;
+            padding-bottom: 0.3rem;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ff6b6b;
+            transition: width 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff6b6b;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+        .blog-container {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .blog-post {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .post-date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .post-title {
+            font-size: 1.8rem;
+            color: #ff6b6b;
+            margin-bottom: 1rem;
+        }
+
+        .post-content {
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .read-more {
+            color: #ff6b6b;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">שיר חדש</div>
+        <nav>
+            <a href="index.html">בית</a>
+            <a href="albums.html">אלבומים</a>
+            <a href="Artists.html">אמנים</a>
+            <a href="Weddings.html">חתונות</a>
+            <a href="Ringtones.html">רינגטונים</a>
+            <a href="about.html">אודות</a>
+            <a href="blog.html">בלוג</a>
+            <a href="contact.html">צור קשר</a>
+        </nav>
+    </header>
+
+    <div class="blog-container">
+
+        <article class="blog-post">
+            <div class="post-date">15 ביוני, 2025</div>
+            <h2 class="post-title">עדכון מערכת: שיפורים בממשק ההורדה</h2>
+            <div class="post-content">
+                <p>השבוע ביצענו מספר שיפורים במערכת ההורדה שלנו. מעתה תוכלו ליהנות מהורדה מהירה יותר...</p>
+                <a href="#" class="read-more">קרא עוד</a>
+            </div>
+        </article>
+
+        <article class="blog-post">
+            <div class="post-date">10 ביוני, 2025</div>
+            <h2 class="post-title">מדריך: איך להוריד שירים מהאתר</h2>
+            <div class="post-content">
+                <p>הכנו עבורכם מדריך מפורט המסביר כיצד להוריד שירים מהאתר בצורה פשוטה ומהירה...</p>
+                <a href="#" class="read-more">קרא עוד</a>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

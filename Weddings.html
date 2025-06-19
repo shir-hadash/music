@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>חתונות - שיר חדש</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Heebo', sans-serif;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(
+                rgba(255, 255, 255, 0.5),
+                rgba(255, 255, 255, 0.5)
+            ),
+            url('header-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .logo {
+            font-size: 2.5rem;
+            color: #ff6b6b;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+            position: relative;
+            padding-bottom: 0.3rem;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ff6b6b;
+            transition: width 0.3s;
+        }
+        nav a:hover {
+            color: #ff6b6b;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+        .weddings-group {
+            position: relative;
+            border-radius: 18px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+            max-width: 1250px;
+            margin: 3rem auto 2rem auto;
+            padding: 2rem 1.5rem 1.5rem 1.5rem;
+            overflow: hidden;
+            background: url('wedding-bg.jpg') center center/cover no-repeat;
+        }
+        .weddings-group::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(255,255,255,0.85);
+            z-index: 0;
+        }
+        .group-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.2em;
+            position: relative;
+            z-index: 1;
+        }
+        .group-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ff6b6b;
+            text-align: right;
+        }
+        .weddings-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .wedding-card {
+            border-radius: 18px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80px;
+            transition: transform 0.15s, box-shadow 0.15s;
+            text-align: center;
+        }
+        .wedding-card:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 8px 24px rgba(255,107,107,0.14);
+        }
+        .wedding-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+            width: 100%;
+        }
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .organists-group .wedding-card {
+            background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('piano.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .organists-group .wedding-card .wedding-title {
+            color: #2c3e50; /* Darker color for readability */
+            text-shadow: 0px 1px 3px rgba(255, 255, 255, 0.7); /* Text shadow for contrast */
+        }
+        .singers-group .wedding-card {
+            background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('voice.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .singers-group .wedding-card .wedding-title {
+            color: #2c3e50; /* Darker color for readability */
+            text-shadow: 0px 1px 3px rgba(255, 255, 255, 0.7); /* Text shadow for contrast */
+        }
+        .events-group .wedding-card {
+             background: linear-gradient(90deg, #d4fc79 0%, #96e6a1 100%);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">שיר חדש</div>
+        <nav>
+            <a href="index.html">בית</a>
+            <a href="albums.html">אלבומים</a>
+            <a href="Artists.html">אמנים</a>
+            <a href="Weddings.html" style="color:#ff6b6b;">חתונות</a>
+            <a href="Ringtones.html">רינגטונים</a>
+            <a href="about.html">אודות</a>
+            <a href="blog.html">בלוג</a>
+            <a href="contact.html">צור קשר</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- קבוצה 1: אורגניסטים -->
+        <div class="weddings-group organists-group">
+            <div class="group-header">
+                <div class="group-title">אורגניסטים</div>
+            </div>
+            <div class="weddings-container">
+                <a href="organist1.html" class="card-link"><div class="wedding-card"><div class="wedding-title">הרשי סגל</div></div></a>
+                <a href="organist2.html" class="card-link"><div class="wedding-card"><div class="wedding-title">יוחנן אורי</div></div></a>
+                <a href="organist3.html" class="card-link"><div class="wedding-card"><div class="wedding-title">מאיר אדלר</div></div></a>
+                <a href="organist4.html" class="card-link"><div class="wedding-card"><div class="wedding-title">מוישי מנדלסון</div></div></a>
+                <a href="organist5.html" class="card-link"><div class="wedding-card"><div class="wedding-title">לייזר סופר</div></div></a>
+                <a href="organist6.html" class="card-link"><div class="wedding-card"><div class="wedding-title">רפי שטיין</div></div></a>
+                <a href="organist7.html" class="card-link"><div class="wedding-card"><div class="wedding-title">אפרים מרקוביץ</div></div></a>
+                <a href="organist8.html" class="card-link"><div class="wedding-card"><div class="wedding-title">איציק אייזנשטאט</div></div></a>
+                <a href="organist8.html" class="card-link"><div class="wedding-card"><div class="wedding-title">מוטי רוזנפלד</div></div></a>
+                <a href="organist8.html" class="card-link"><div class="wedding-card"><div class="wedding-title">שייע דוידוביץ</div></div></a>
+
+            </div>
+        </div>
+
+        <!-- קבוצה 2: זמרים -->
+        <div class="weddings-group singers-group">
+            <div class="group-header">
+                <div class="group-title">זמרים</div>
+            </div>
+            <div class="weddings-container">
+                <a href="singer1.html" class="card-link"><div class="wedding-card"><div class="wedding-title">מנדי וויס</div></div></a>
+                <a href="singer2.html" class="card-link"><div class="wedding-card"><div class="wedding-title">אהרל'ה שארף</div></div></a>
+                <a href="singer3.html" class="card-link"><div class="wedding-card"><div class="wedding-title">שמוליק קליין</div></div></a>
+                <a href="singer4.html" class="card-link"><div class="wedding-card"><div class="wedding-title">אהרל'ע סמט</div></div></a>
+                <a href="singer5.html" class="card-link"><div class="wedding-card"><div class="wedding-title">זאנויל ויינברגר</div></div></a>
+                <a href="singer6.html" class="card-link"><div class="wedding-card"><div class="wedding-title">יואלי קליין</div></div></a>
+                <a href="singer7.html" class="card-link"><div class="wedding-card"><div class="wedding-title">עקיבא רוטמן</div></div></a>
+                <a href="singer8.html" class="card-link"><div class="wedding-card"><div class="wedding-title">יוסלה קרישבסקי</div></div></a>
+                <a href="singer7.html" class="card-link"><div class="wedding-card"><div class="wedding-title">יהודה מנהיים</div></div></a>
+                <a href="singer8.html" class="card-link"><div class="wedding-card"><div class="wedding-title">יוסי לייפער</div></div></a>
+            </div>
+        </div>
+        
+        <!-- קבוצה 3: אירועים -->
+        <div class="weddings-group events-group">
+            <div class="group-header">
+                <div class="group-title">אירועים</div>
+            </div>
+            <div class="weddings-container">
+                <a href="event1.html" class="card-link"><div class="wedding-card"><div class="wedding-title">חתונת השליט"א</div></div></a>
+                <a href="event2.html" class="card-link"><div class="wedding-card"><div class="wedding-title">אירוע</div></div></a>
+                <a href="event3.html" class="card-link"><div class="wedding-card"><div class="wedding-title">אירוע</div></div></a>
+                <a href="event4.html" class="card-link"><div class="wedding-card"><div class="wedding-title">חתונה בויז'ניץ</div></div></a>
+                <a href="event5.html" class="card-link"><div class="wedding-card"><div class="wedding-title">הכנסת ספר תורה</div></div></a>
+                <a href="event6.html" class="card-link"><div class="wedding-card"><div class="wedding-title">סיום הש"ס</div></div></a>
+                <a href="event1.html" class="card-link"><div class="wedding-card"><div class="wedding-title">חתונת השליט"א</div></div></a>
+                <a href="event2.html" class="card-link"><div class="wedding-card"><div class="wedding-title">אירוע</div></div></a>
+                <a href="event3.html" class="card-link"><div class="wedding-card"><div class="wedding-title">אירוע</div></div></a>
+                <a href="event4.html" class="card-link"><div class="wedding-card"><div class="wedding-title">חתונה בויז'ניץ</div></div></a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

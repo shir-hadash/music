@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>רינגטונים - שיר חדש</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Heebo', sans-serif;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(
+                rgba(255, 255, 255, 0.5),
+                rgba(255, 255, 255, 0.5)
+            ),
+            url('header-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .logo {
+            font-size: 2.5rem;
+            color: #ff6b6b;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1rem 0;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+            position: relative;
+            padding-bottom: 0.3rem;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ff6b6b;
+            transition: width 0.3s;
+        }
+        nav a:hover {
+            color: #ff6b6b;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+        .ringtones-group {
+            position: relative;
+            border-radius: 18px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+            max-width: 1250px;
+            margin: 3rem auto 2rem auto;
+            padding: 2rem 1.5rem 1.5rem 1.5rem;
+            overflow: hidden;
+            background: url('group-bg.jpg') center center/cover no-repeat;
+        }
+        .ringtones-group::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(255,255,255,0.75);
+            z-index: 0;
+        }
+        .group-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.2em;
+            position: relative;
+            z-index: 1;
+        }
+        .group-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #ff6b6b;
+            text-align: right;
+        }
+        .ringtones-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        @media (min-width: 900px) {
+            .ringtones-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (min-width: 1200px) {
+            .ringtones-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        @media (max-width: 600px) {
+            .ringtones-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        .ringtone-card {
+            background: linear-gradient(90deg, #ffe29f 0%, #ffb347 100%);
+            border-radius: 18px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            padding: 1.1rem 1.2rem;
+            display: flex;
+            flex-direction: column; /* שינוי כאן */
+            align-items: center;
+            min-height: 120px;
+            min-width: 340px;
+            transition: transform 0.15s, box-shadow 0.15s;
+            position: relative;
+            gap: 0.7rem;
+        }
+        .ringtone-card:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 8px 24px rgba(255,107,107,0.14);
+        }
+        .ringtone-img {
+            width: 54px;
+            height: 54px;
+            border-radius: 12px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(255,107,107,0.08);
+            flex-shrink: 0;
+        }
+        .ringtone-img img {
+            width: 38px;
+            height: 38px;
+        }
+        .ringtone-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-width: 0;
+            align-items: center;
+        }
+        .ringtone-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #ff6b6b;
+            margin-bottom: 2px;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .ringtone-artist {
+            font-size: 0.98em;
+            color: #666;
+            margin-bottom: 4px;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .ringtone-audio {
+            width: 90%;
+            min-width: 140px;
+            margin: 0;
+            direction: ltr;
+        }
+        @media (max-width: 600px) {
+            .ringtone-card {
+                min-width: unset;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">שיר חדש</div>
+        <nav>
+            <a href="index.html">בית</a>
+            <a href="albums.html">אלבומים</a>
+            <a href="Artists.html">אמנים</a>
+            <a href="Weddings.html">חתונות</a>
+            <a href="Ringtones.html" style="color:#ff6b6b;">רינגטונים</a>
+            <a href="about.html">אודות</a>
+            <a href="blog.html">בלוג</a>
+            <a href="contact.html">צור קשר</a>
+        </nav>
+    </header>
+
+    <!-- קבוצה 1 -->
+    <div class="ringtones-group">
+        <div class="group-header">
+            <div class="group-title">רינגטונים פופולריים</div>
+        </div>
+        <div class="ringtones-container">
+            <div class="ringtone-card">
+                <div class="ringtone-img">
+                    <img src="ringtone.png" alt="רינגטון">
+                </div>
+                <div class="ringtone-info">
+                    <div class="ringtone-title">שיר בוקר שמח</div>
+                    <div class="ringtone-artist">יוסי כהן</div>
+                </div>
+                <audio class="ringtone-audio" src="ringtones/happy_morning.mp3" controls></audio>
+            </div>
+            <div class="ringtone-card">
+                <div class="ringtone-img">
+                    <img src="ringtone.png" alt="רינגטון">
+                </div>
+                <div class="ringtone-info">
+                    <div class="ringtone-title">הודעה חדשה</div>
+                    <div class="ringtone-artist">גדעון לוי</div>
+                </div>
+                <audio class="ringtone-audio" src="ringtones/new_message.mp3" controls></audio>
+            </div>
+            <!-- הוסף כאן עוד כרטיסים -->
+        </div>
+    </div>
+
+    <!-- קבוצה 2 -->
+    <div class="ringtones-group">
+        <div class="group-header">
+            <div class="group-title">רינגטונים לחגים</div>
+        </div>
+        <div class="ringtones-container">
+            <div class="ringtone-card">
+                <div class="ringtone-img">
+                    <img src="ringtone.png" alt="רינגטון">
+                </div>
+                <div class="ringtone-info">
+                    <div class="ringtone-title">חג שמח</div>
+                    <div class="ringtone-artist">דני ישראלי</div>
+                </div>
+                <audio class="ringtone-audio" src="ringtones/holiday1.mp3" controls></audio>
+            </div>
+            <!-- הוסף כאן עוד כרטיסים -->
+        </div>
+    </div>
+
+    <script>
+        // נגן אחד בלבד בכל רגע
+        document.addEventListener('play', function(e){
+            const audios = document.querySelectorAll('audio');
+            audios.forEach(audio => {
+                if(audio !== e.target){
+                    audio.pause();
+                    audio.currentTime = 0;
+                }
+            });
+        }, true);
+    </script>
+</body>
+</html>
