@@ -154,6 +154,169 @@
     </style>
 </head>
 <body>
+<!-- הוסף ל-body של הדף שלך -->
+<div id="ad-modal" style="display:none;">
+  <div class="ad-content">
+    <span id="close-ad" style="display:none;">&times;</span>
+    <div class="ad-inner">
+      <div class="ad-image">
+        <img src="https://github.com/shir-hadash/music/blob/main/favicon.png" alt="שיר חדש">
+      </div>
+      <div class="ad-text">
+        <h2>שיר חדש"</h2>
+        <p>מצטערים האתר כרגע בבניה מרבית הקישורים בעמוד זה אינם עובדים כרגע</p>
+        <ul>
+          <li>10% הנחה על כל הגיטרות</li>
+          <li>שיעור ראשון חינם ברכישת כלי נגינה</li>
+          <li>משלוחים חינם בכל הארץ</li>
+        </ul>
+        <a href="https://shir-hadash.github.io/music/index.html" class="ad-btn">חזרה לדף הבית</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+#ad-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.7s;
+  direction: rtl;
+}
+.ad-content {
+  background: linear-gradient(135deg, #fffbe7 60%, #ffe3e3 100%);
+  padding: 0;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  min-width: 650px;
+  max-width: 90vw;
+  min-height: 320px;
+  position: relative;
+  overflow: hidden;
+  animation: floatIn 0.7s;
+}
+#ad-modal .ad-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+.ad-image {
+  background: #f7e6c4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 260px;
+  max-width: 300px;
+  padding: 0;
+}
+.ad-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+.ad-text {
+  flex: 1;
+  padding: 36px 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ad-text h2 {
+  margin: 0 0 12px 0;
+  font-size: 2.1em;
+  color: #b85c38;
+  font-family: 'Segoe UI', sans-serif;
+}
+.ad-text p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+.ad-text ul {
+  margin: 0 0 18px 0;
+  padding-right: 18px;
+  color: #5a3d1e;
+  font-size: 1.1em;
+}
+.ad-btn {
+  display: inline-block;
+  background: #b85c38;
+  color: #fff;
+  padding: 12px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(184,92,56,0.12);
+  margin-top: 8px;
+}
+.ad-btn:hover {
+  background: #a14d2a;
+}
+#close-ad {
+  position: absolute;
+  top: 16px; left: 18px;
+  font-size: 32px;
+  cursor: pointer;
+  color: #b85c38;
+  background: #fffbe7;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s;
+  z-index: 2;
+}
+#close-ad:hover { background: #ffe3e3; color: #e00; }
+@media (max-width: 800px) {
+  .ad-content { min-width: 90vw; }
+  #ad-modal .ad-inner { flex-direction: column; }
+  .ad-image img {
+    border-radius: 0;
+    border-top-right-radius: 18px;
+    border-top-left-radius: 18px;
+    height: 180px;
+    width: 100%;
+  }
+  .ad-image { min-width: 100%; max-width: 100%; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes floatIn {
+  from { transform: translateY(-40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+</style>
+
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+  // בדוק אם המשתמש כבר ראה את המודעה
+  if (localStorage.getItem('adSeen') === '1') return;
+  setTimeout(function() {
+    document.getElementById('ad-modal').style.display = 'flex';
+    setTimeout(function() {
+      document.getElementById('close-ad').style.display = 'flex';
+    }, 2000); // איקס יופיע אחרי 2 שניות
+  }, 5000); // המודעה תופיע אחרי שנייה
+  document.getElementById('close-ad').onclick = function() {
+    document.getElementById('ad-modal').style.display = 'none';
+    localStorage.setItem('adSeen', '1'); // שמור שהמודעה נצפתה
+  };
+});
+</script>       
     <header>
         <div class="logo">שיר חדש</div>
         <nav>
