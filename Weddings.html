@@ -304,7 +304,7 @@
 <script>
 window.addEventListener('DOMContentLoaded', function() {
   // בדוק אם המשתמש כבר ראה את המודעה
-  if (localStorage.getItem('adSeen') === '1') return;
+  if (localStorage.getItem('adSeen') === '2') return;
   setTimeout(function() {
     document.getElementById('ad-modal').style.display = 'flex';
     setTimeout(function() {
@@ -313,7 +313,7 @@ window.addEventListener('DOMContentLoaded', function() {
   }, 5000); // המודעה תופיע אחרי שנייה
   document.getElementById('close-ad').onclick = function() {
     document.getElementById('ad-modal').style.display = 'none';
-    localStorage.setItem('adSeen', '1'); // שמור שהמודעה נצפתה
+    localStorage.setItem('adSeen', '2'); // שמור שהמודעה נצפתה
   };
 });
 </script>       
