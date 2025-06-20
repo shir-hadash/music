@@ -147,6 +147,23 @@
             font-size: 1.08rem;
             text-align: center;
         }
+        #load-more-btn {
+            padding:12px 32px;
+            font-size:1.1em;
+            border-radius:8px;
+            background:#ff6b6b;
+            color:#fff;
+            border:none;
+            cursor:pointer;
+            font-family:inherit;
+            font-weight:bold;
+            box-shadow:0 2px 8px rgba(255,107,107,0.12);
+            transition:background 0.2s;
+            margin-top:30px;
+        }
+        #load-more-btn:hover {
+            background:#e55a5a;
+        }
     </style>
 </head>
 <body>
@@ -164,86 +181,95 @@
         </nav>
     </header>
     <div class="artists-wrapper">
-        <div class="artists-grid">
-            <a class="artist-link" href="artists/naftali-kampe.html">
-                <div class="artist-card">
-                    <img src="https://yt3.googleusercontent.com/TWdl9xDuKhBPxksv1-veYz4KB-xGtRZ_gpG3N_3lCz4AGAInX1kUKT9A4fcYZz31mmx6_hNvYoU=s160-c-k-c0x00ffffff-no-rj" alt="נפתלי קמפה" class="artist-img">
-                    <div class="artist-updated">עודכן לאחרונה: 19.06.2025</div>
-                    <div class="artist-content">
-                        <div class="artist-title">נפתלי קמפה</div>
-                        <div class="artist-genre">חסידי</div>
-                    </div>
-                </div>
-            </a>
-            <a class="artist-link" href="artists/avraham-fried.html">
-                <div class="artist-card">
-                    <img src="https://yt3.googleusercontent.com/wcN4-Yf6cAcnPfbZN3SHPFhnGCsFWmepAFrVWO66RupviP_fp52N2W2VSZpww-3sPX9npngr1w=s160-c-k-c0x00ffffff-no-rj" alt="אברהם פריד" class="artist-img">
-                    <div class="artist-updated">עודכן לאחרונה: 19.06.2025</div>
-                    <div class="artist-content">
-                        <div class="artist-title">אברהם פריד</div>
-                        <div class="artist-genre">חסידי</div>
-                    </div>
-                </div>
-            </a>
-            <a class="artist-link" href="artists/yaakov-shwekey.html">
-                <div class="artist-card">
-                    <img src="https://yt3.googleusercontent.com/egC_JGXpatMo_nPimT5hSrtAg7saIWSa0xlRgRkaAPjPnSkxc9VhgE285FqoR5villjMWV0mpw=s160-c-k-c0x00ffffff-no-rj" alt="יעקב שוואקי" class="artist-img">
-                    <div class="artist-updated">עודכן לאחרונה: 19.06.2025</div>
-                    <div class="artist-content">
-                        <div class="artist-title">יעקב שוואקי</div>
-                        <div class="artist-genre">חסידי</div>
-                    </div>
-                </div>
-            </a>
-            <a class="artist-link" href="artists/harel-tal.html">
-                <div class="artist-card">
-                    <img src="https://yt3.googleusercontent.com/ytc/AIdro_m54ueDlkXkuXOYmBp0QxlQ8i2tviHgXk-QxQyqQk97uOs=s160-c-k-c0x00ffffff-no-rj" alt="הראל טל" class="artist-img">
-                    <div class="artist-updated">עודכן לאחרונה: 19.06.2025</div>
-                    <div class="artist-content">
-                        <div class="artist-title">הראל טל</div>
-                        <div class="artist-genre">דתי</div>
-                    </div>
-                </div>
-            </a>
-            <a class="artist-link" href="artists/naftali-kampe.html">
-                <div class="artist-card">
-                    <img src="https://yt3.googleusercontent.com/TWdl9xDuKhBPxksv1-veYz4KB-xGtRZ_gpG3N_3lCz4AGAInX1kUKT9A4fcYZz31mmx6_hNvYoU=s160-c-k-c0x00ffffff-no-rj" alt="נפתלי קמפה" class="artist-img">
-                    <div class="artist-updated">עודכן לאחרונה: 19.06.2025</div>
-                    <div class="artist-content">
-                        <div class="artist-title">נפתלי קמפה</div>
-                        <div class="artist-genre">חסידי</div>
-                    </div>
-                </div>
-            </a>
-            <a class="artist-link" href="artists/avraham-fried.html">
-                <div class="artist-card">
-                    <img src="https://yt3.googleusercontent.com/wcN4-Yf6cAcnPfbZN3SHPFhnGCsFWmepAFrVWO66RupviP_fp52N2W2VSZpww-3sPX9npngr1w=s160-c-k-c0x00ffffff-no-rj" alt="אברהם פריד" class="artist-img">
-                    <div class="artist-updated">עודכן לאחרונה: 19.06.2025</div>
-                    <div class="artist-content">
-                        <div class="artist-title">אברהם פריד</div>
-                        <div class="artist-genre">חסידי</div>
-                    </div>
-                </div>
-            </a>
-            <a class="artist-link" href="artists/yaakov-shwekey.html">
-                <div class="artist-card">
-                    <img src="https://yt3.googleusercontent.com/egC_JGXpatMo_nPimT5hSrtAg7saIWSa0xlRgRkaAPjPnSkxc9VhgE285FqoR5villjMWV0mpw=s160-c-k-c0x00ffffff-no-rj" alt="יעקב שוואקי" class="artist-img">
-                    <div class="artist-updated">עודכן לאחרונה: 19.06.2025</div>
-                    <div class="artist-content">
-                        <div class="artist-title">יעקב שוואקי</div>
-                        <div class="artist-genre">חסידי</div>
-                    </div>
-                </div>
-            </a>
-            <a class="artist-link" href="artists/harel-tal.html">
-                <div class="artist-card">
-                    <img src="https://yt3.googleusercontent.com/ytc/AIdro_m54ueDlkXkuXOYmBp0QxlQ8i2tviHgXk-QxQyqQk97uOs=s160-c-k-c0x00ffffff-no-rj" alt="הראל טל" class="artist-img">
-                    <div class="artist-updated">עודכן לאחרונה: 19.06.2025</div>
-                    <div class="artist-content">
-                        <div class="artist-title">הראל טל</div>
-                        <div class="artist-genre">דתי</div>
-                    </div>
-                </div>
-            </a>
+        <div id="artists-grid" class="artists-grid"></div>
+        <div style="text-align:center;">
+            <button id="load-more-btn">טען עוד</button>
         </div>
     </div>
+    <script>
+const artists = [
+  {name:"אברהם פריד",genre:"חסידי",img:"https://yt3.googleusercontent.com/wcN4-Yf6cAcnPfbZN3SHPFhnGCsFWmepAFrVWO66RupviP_fp52N2W2VSZpww-3sPX9npngr1w=s160-c-k-c0x00ffffff-no-rj",link:"artists/avraham-fried.html"},
+  {name:"יעקב שוואקי",genre:"חסידי",img:"https://yt3.googleusercontent.com/egC_JGXpatMo_nPimT5hSrtAg7saIWSa0xlRgRkaAPjPnSkxc9VhgE285FqoR5villjMWV0mpw=s160-c-k-c0x00ffffff-no-rj",link:"artists/yaakov-shwekey.html"},
+  {name:"מרדכי בן דוד",genre:"חסידי",img:"https://yt3.googleusercontent.com/ytc/AIdro_knHq9YeBQkgCBPyzywZSlSrLLftjQe7q5XoI2QgAZoSg=s160-c-k-c0x00ffffff-no-rj",link:"artists/mordechai-ben-david.html"},
+  {name:"מוטי שטיינמץ",genre:"חסידי",img:"https://yt3.googleusercontent.com/BHkM8-f0nMGSdY8s8hsVG9TvuVs_k2qJ_blu6PMFXmFUUY-EKmGu5ZZIUBaSzwSxyDg4mKH2=s160-c-k-c0x00ffffff-no-rj",link:"artists/motti-steinmetz.html"},
+  {name:"שמילי אונגר",genre:"חסידי",img:"https://yt3.googleusercontent.com/ahXhP_ND6w3CeL_YuYy7-IvhuAVggKPDd24Hzp8f8EBKA6H24OoVySpJ7snocIDKxSRcVIE=s160-c-k-c0x00ffffff-no-rj",link:"artists/shmili-unger.html"},
+  {name:"בערי וועבר",genre:"חסידי",img:"https://yt3.googleusercontent.com/KpHs0lT5cBOv7CWeWyk_QgfMQ5JoDBxoPLDcAsQ6AzuRLdQnzBoJnIuUmBEBs1Swd4UpCVHl=s160-c-k-c0x00ffffff-no-rj",link:"artists/berri-weber.html"},
+  {name:"ישי ריבו",genre:"דתי",img:"https://yt3.googleusercontent.com/YKyQ8xzpfJT4VX-d3Tjd3jlVjNtzWfB7LyEugdV5P0bi2kwGYiIIvBpqR_GE2819dPVypwQ_UA=s160-c-k-c0x00ffffff-no-rj",link:"artists/yishai-ribo.html"},
+  {name:"הראל טל",genre:"דתי",img:"https://yt3.googleusercontent.com/ytc/AIdro_m54ueDlkXkuXOYmBp0QxlQ8i2tviHgXk-QxQyqQk97uOs=s160-c-k-c0x00ffffff-no-rj",link:"artists/harel-tal.html"},
+  {name:"ארי היל",genre:"חסידי",img:"https://yt3.googleusercontent.com/CQbBjWkoIBjnzq-0QGl0yt517clNHKaqXIP248rxI5t6hgG0gQ7DXUQOa62hVm2tnb0JzrIR=s160-c-k-c0x00ffffff-no-rj",link:"artists/ari-hill.html"},
+  {name:"יוסף חיים שוואקי",genre:"חסידי",img:"https://yt3.ggpht.com/0kPp5_z2Dr1tX0E_iNui4rKJP_R8KIwJ5_7egfnzUNRvQ4pG9HGw1gWKiOlwer8NWLFp94e01Wc=s48-c-k-c0x00ffffff-no-rj",link:"artists/yosef-chaim-shwekey.html"},
+  {name:"איציק דדיה",genre:"דתי",img:"https://yt3.googleusercontent.com/og2Qm2R1fRQ1fpLts3lPvreg2noxWTjJZCU_0lfmT3R8LFedi-BR8jHWbCyPwCQV17MerUXEaQs=s160-c-k-c0x00ffffff-no-rj",link:"artists/itzik-dadya.html"},
+  {name:"יונתן רזאל",genre:"דתי",img:"https://yt3.googleusercontent.com/UYcaUYCA83JccGKvHLFhPkg4KcgcgpfDN1JMZZtLZ2eYph3B9akbeEfqpuiDUoTXVcVtosatOLk=s160-c-k-c0x00ffffff-no-rj",link:"artists/yonatan-razel.html"},
+  {name:"אוהד מושקוביץ",genre:"חסידי",img:"https://yt3.googleusercontent.com/ARrp5li3qQHgS2_l4kwDPi4GdN86l10HoXCNi-uD69lzc0GVs3_IUyylMHJV5rFu8QWmrwJk=s160-c-k-c0x00ffffff-no-rj",link:"artists/ohad-moskowitz.html"},
+  {name:"חיים ישראל",genre:"מזרחי",img:"https://static.wixstatic.com/media/9a8032_0c0097aeee2545a385096a922992be64~mv2_d_4928_3280_s_4_2.jpg/v1/fit/w_1164,h_771,q_90,enc_avif,quality_auto/9a8032_0c0097aeee2545a385096a922992be64~mv2_d_4928_3280_s_4_2.jpg",link:"artists/chaim-israel.html"},
+  {name:"יובל טייב",genre:"מזרחי",img:"https://yt3.googleusercontent.com/ytc/AIdro_mRzwEXipKzBhPDExniXeQizhQ3TLVGhjx2xnymnZrciBs=s160-c-k-c0x00ffffff-no-rj",link:"artists/yuval-taieb.html"},
+  {name:"יונתן שיינפלד",genre:"חסידי",img:"https://yt3.googleusercontent.com/ytc/AIdro_nBTGb9PZXPpEL55pfbqzu655PyPn-RXWOQCqBwz4AZUwg=s160-c-k-c0x00ffffff-no-rj",link:"artists/avraham-david.html"},
+  {name:"יוסי גרין",genre:"חסידי",img:"https://yt3.googleusercontent.com/zRmAny2DyUk9R2fgrF083LJaXufw0_zNQOeqegQ6xa0-IRUO6tMYJlp9k6lW5mX0YqW7_D1s=w1138-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",link:"artists/yossi-green.html"},
+  {name:"יוסי ברגר",genre:"חסידי",img:"https://yt3.ggpht.com/ytc/AIdro_nj5rX6SPk9Ti7l0qcIKoObTO33QA5FQnSDzbjjlVaeBw=s48-c-k-c0x00ffffff-no-rj",link:"artists/yossi-berger.html"},
+  {name:"שלומי גרטנר",genre:"חסידי",img:"https://yt3.googleusercontent.com/rxOCbM7EGwXsIC8oxbXQfv7NcA9HC0B1gxjSrzgMTKoAp62UUDpYLf-_pyjOvGAxGx0njqZP=s160-c-k-c0x00ffffff-no-rj",link:"artists/shlomi-gertner.html"},
+  {name:"יואלי דיקמן",genre:"חסידי",img:"https://yt3.googleusercontent.com/ft8EOxN3csmViOWm2NKdCp_4mYvk_cC6iJzBye1UlGKnsvYtmVgVS5rVv11mG2C0grRL7WWyjQ=s160-c-k-c0x00ffffff-no-rj",link:"artists/yoely-dikman.html"},
+  {name:"מנדי וייס",genre:"חסידי",img:"https://yt3.googleusercontent.com/sR44gyAak_h5kEZOKOyukroi1c6jPruC6oUp3Pet7KFwj2vVUfxGJTRghlvBb1AK1Kp7r8V0EA=s160-c-k-c0x00ffffff-no-rj",link:"artists/mendy-weiss.html"},
+  {name:"אייזיק האניג",genre:"חסידי",img:"https://yt3.ggpht.com/otYhKENsYxT0-TApnYT-13zY543bJWlliQnRYeN4Kl8J8OXqgna2DR_ta3BQnah_d0EZPzb24g=s48-c-k-c0x00ffffff-no-rj",link:"artists/yossi-shwekey.html"},
+  {name:"הערשי ויינבערגער",genre:"חסידי",img:"https://yt3.googleusercontent.com/3S8zdkmfaanyaxZq40xXT1I5kG6fESEaAyyRE-_kxOR_0u189T3szhbcjBYgaj-oXci6kY_0fQ=s160-c-k-c0x00ffffff-no-rj",link:"artists/yonatan-sheinfeild.html"},
+  {name:"לוי פלקאויטש",genre:"חסידי",img:"https://yt3.googleusercontent.com/lqfEFc1_gL5on1GMaTnYwgTlfBhavfZXmVS4bI_lv7lTBrKr8uSUagN0Cc4MtT-aTI31Q0YHukE=s160-c-k-c0x00ffffff-no-rj",link:"artists/efraim-mendelson.html"},
+  {name:"מרדכי שפירא",genre:"חסידי",img:"https://yt3.googleusercontent.com/ytc/AIdro_m21z21z21z21z21z21z21z21z21z21z21z21z21z21z21z21z21z21z21z21z21z21z21=s160-c-k-c0x00ffffff-no-rj",link:"artists/yossi-levi.html"},
+  {name:"שלום למר",genre:"חסידי",img:"https://yt3.googleusercontent.com/-Wu908QVOnto8AzTiUM7351wGSiAcfnc9jN_9peCUt9iUdeWesbJCSfeFRGY9UfPywKoj0ZTtA=s160-c-k-c0x00ffffff-no-rj",link:"artists/menachem-toker.html"},
+  {name:"שלמה כהן",genre:"חסידי",img:"https://yt3.googleusercontent.com/ytc/AIdro_m23z23z23z23z23z23z23z23z23z23z23z23z23z23z23z23z23z23z23z23z23z23z23=s160-c-k-c0x00ffffff-no-rj",link:"artists/yossi-gil.html"},
+  {name:"שלמה יהודה רכניץ",genre:"חסידי",img:"https://yt3.googleusercontent.com/ytc/AIdro_m24y24y24y24y24y24y24y24y24y24y24y24y24y24y24y24y24y24y24y24y24y24y24=s160-c-k-c0x00ffffff-no-rj",link:"artists/yossi-cohen.html"},
+  {name:"יהודה גרין",genre:"חסידי",img:"https://yt3.googleusercontent.com/ytc/AIdro_m25z25z25z25z25z25z25z25z25z25z25z25z25z25z25z25z25z25z25z25z25z25z25=s160-c-k-c0x00ffffff-no-rj",link:"artists/yossi-piamanta.html"},
+  {name:"יוסי שטרן",genre:"חסידי",img:"https://yt3.googleusercontent.com/ytc/AIdro_m28y28y28y28y28y28y28y28y28y28y28y28y28y28y28y28y28y28y28y28y28y28y28=s160-c-k-c0x00ffffff-no-rj",link:"artists/yossi-stern.html"},
+  {name:"פיני איינהורן",genre:"חסידי",img:"https://yt3.googleusercontent.com/Ue5rtX6GfcOyGgaE9Ej24v1H2WikqIGIzJJIZZK67rA9-_l93wBfQL_0UXkMaXX0vg1WTcbxYA=s160-c-k-c0x00ffffff-no-rj",link:"artists/yossi-shwekey2.html"},
+  {name:"בנצי שטיין",genre:"חסידי",img:"https://yt3.googleusercontent.com/iJjVj5lb3FpAc5gARXJEStI2FgCMnUnDGlx8R9e1RiFVkUsV6qVOVTBnVHhjXDg1vEccQaXUmA=s160-c-k-c0x00ffffff-no-rj",link:"artists/yossi-green3.html"},
+  {name:"שמוליק סוכות",genre:"חסידי",img:"https://yt3.googleusercontent.com/dH_JXTwMxD1d3JLLjzwsKyHZ80PTim0bB6ItgiuY2NAmClon9aggjCUX0hNWx4v7rM-NaK6YoA=s160-c-k-c0x00ffffff-no-rj",link:"artists/yossi-stern2.html"},
+  {name:"מקהלת מלכות",genre:"חסידי",img:"https://yt3.googleusercontent.com/h0NaFcWAXUjjuWe8KUEWS2OlLX-VOxBqCl-9ABhSNBgxzH8GBQNOd47B2P1_X3RKnwgg1lOIaZk=s160-c-k-c0x00ffffff-no-rj",link:"artists/yossi-rosenblum2.html"},
+  {name:"מונה רוזנבלום",genre:"חסידי",img:"https://yt3.googleusercontent.com/ytc/AIdro_m34y34y34y34y34y34y34y34y34y34y34y34y34y34y34y34y34y34y34y34y34y34y34=s160-c-k-c0x00ffffff-no-rj",link:"artists/yossi-shwekey3.html"},
+  {name:"פרחי מיאמי",genre:"חסידי",img:"https://yt3.googleusercontent.com/ytc/AIdro_mZrk5nmdIKSYx428UrvAu7D5tzpSnPsw45W_nwn14fXA=s160-c-k-c0x00ffffff-no-rj",link:"artists/yossi-green4.html"},
+  {name:"דודי קאליש",genre:"חסידי",img:"https://yt3.googleusercontent.com/AuABA8kgOfZIp3iQ92-tCQiVIk-A34JiqDxPKiioRtLNM3vziVyBUPUVzV4yJ5wHml8uqlfLblo=s160-c-k-c0x00ffffff-no-rj",link:"artists/yossi-stern3.html"},
+  {name:"דובי מייזלעס",genre:"חסידי",img:"https://yt3.googleusercontent.com/ytc/AIdro_m37z37z37z37z37z37z37z37z37z37z37z37z37z37z37z37z37z37z37z37z37z37z37=s160-c-k-c0x00ffffff-no-rj",link:"artists/yossi-rosenblum3.html"},
+  {name:"איצ'ה מאיר הלפגוט",genre:"חסידי",img:"https://yt3.googleusercontent.com/ytc/AIdro_m38y38y38y38y38y38y38y38y38y38y38y38y38y38y38y38y38y38y38y38y38y38y38=s160-c-k-c0x00ffffff-no-rj",link:"artists/yossi-shwekey4.html"},
+  {name:"האסק",genre:"חסידי",img:"https://yt3.googleusercontent.com/ytc/AIdro_m39z39z39z39z39z39z39z39z39z39z39z39z39z39z39z39z39z39z39z39z39z39z39=s160-c-k-c0x00ffffff-no-rj",link:"artists/yossi-green5.html"},
+  {name:"בנצי קלצקין",genre:"חסידי",img:"https://yt3.googleusercontent.com/Rqy3JwdSdfN7uIZTwlLi5dQQpcshQq1Vl52zlA8EBVayoYU8lrJ8rvckgnPIjFnxKjCKD1Zcsfs=s160-c-k-c0x00ffffff-no-rj",link:"artists/yossi-stern4.html"},
+  {name:"המנגנים",genre:"חסידי",img:"https://yt3.googleusercontent.com/essa3YzlmaYrF_u3jIS6gxW_8b0srFKO8ES8xj9IUZzuoPwlXaq4Jx8Se_U1VBH9KtNq5b6fhQ=s160-c-k-c0x00ffffff-no-rj",link:"artists/yossi-rosenblum4.html"},
+  {name:"קינדרלאך",genre:"דתי",img:"https://yt3.googleusercontent.com/ytc/AIdro_nN0bXX_GwxgFnBIVGklJ3Uh6roBxw9TEfbJknA_SIIWQ=s160-c-k-c0x00ffffff-no-rj",link:"artists/yossi-shwekey5.html"},
+  {name:"חנן בן ארי",genre:"דתי",img:"https://yt3.ggpht.com/JyuNPo8Nh_1GzQIJvFGAkzEpEpt0m0K9B83P0Lf2xKwAQtNcuVeMe-u9iRL7GLUW3XPA9DxDRsc=s48-c-k-c0x00ffffff-no-rj",link:"artists/yossi-green6.html"},
+  {name:"אהרל'ע סמט",genre:"חסידי",img:"https://yt3.ggpht.com/xZIg3kD5Ce2BN-yaZBOxHiydIm0A2TGX6fHsPah5Z60cmCcUl-JrFlgTa6Xjle-PNMQe786GEQ=s48-c-k-c0x00ffffff-no-rj",link:"artists/yossi-stern5.html"},
+  {name:"לחיים טיש",genre:"חסידי",img:"https://yt3.googleusercontent.com/ytc/AIdro_m45z45z45z45z45z45z45z45z45z45z45z45z45z45z45z45z45z45z45z45z45z45z45=s160-c-k-c0x00ffffff-no-rj",link:"artists/yossi-rosenblum5.html"},
+  {name:"יידל ורדיגר",genre:"חסידי",img:"https://yt3.googleusercontent.com/P6CNr8FbXhV0dpVjifxkQ9nGchzJd-Ab5VPJpiJtte4DvnftOI1NqRulhzs84u8oTi3UjsQB2PY=s160-c-k-c0x00ffffff-no-rj",link:"artists/yossi-shwekey6.html"},
+  {name:"ליפא שמעלצער",genre:"חסידי",img:"https://yt3.googleusercontent.com/BF0to0sNAtbPA4G5fQzSYI3Pd_QzVxDSlLIDmKx5mbX34S5oCZ4E2eXavXOdGIJsIYvs5X2iZDM=s160-c-k-c0x00ffffff-no-rj",link:"artists/yossi-green7.html"},
+  {name:"יוסי רוזנבלום",genre:"חסידי",img:"https://yt3.googleusercontent.com/ytc/AIdro_m49z49z49z49z49z49z49z49z49z49z49z49z49z49z49z49z49z49z49z49z49z49z49=s160-c-k-c0x00ffffff-no-rj",link:"artists/yossi-rosenblum6.html"},
+  {name:"יניב בן משיח",genre:"מזרחי",img:"https://yt3.googleusercontent.com/ytc/AIdro_m50y50y50y50y50y50y50y50y50y50y50y50y50y50y50y50y50y50y50y50y50y50y50=s160-c-k-c0x00ffffff-no-rj",link:"artists/yossi-shwekey7.html"}
+];
+
+let loaded = 0;
+const perLoad = 12;
+
+function renderArtists() {
+  const grid = document.getElementById('artists-grid');
+  for (let i = loaded; i < Math.min(loaded + perLoad, artists.length); i++) {
+    const a = artists[i];
+    const card = document.createElement('a');
+    card.className = 'artist-link';
+    card.href = a.link;
+    card.innerHTML = `
+      <div class="artist-card">
+        <img src="${a.img}" alt="${a.name}" class="artist-img">
+        <div class="artist-updated">עודכן לאחרונה: 19.06.2025</div>
+        <div class="artist-content">
+          <div class="artist-title">${a.name}</div>
+          <div class="artist-genre">${a.genre}</div>
+        </div>
+      </div>
+    `;
+    grid.appendChild(card);
+  }
+  loaded += perLoad;
+  if (loaded >= artists.length) {
+    document.getElementById('load-more-btn').style.display = 'none';
+  }
+}
+
+document.getElementById('load-more-btn').onclick = renderArtists;
+window.addEventListener('DOMContentLoaded', renderArtists);
+    </script>
+</body>
+</html>
